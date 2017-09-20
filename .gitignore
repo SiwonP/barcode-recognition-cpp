@@ -1,0 +1,6 @@
+*.jpg
+CMakeFiles
+*.cmake
+CMakeCache.txt
+DisplayImage
+Makefile
