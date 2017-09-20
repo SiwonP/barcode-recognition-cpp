@@ -16,8 +16,14 @@ Make sure you have git and cmake installed on your machine otherwise you won't
 be able to compile this project 
 
 ```
-git clone https://www.github.com/SiwonP/barcode-recognition-cpp && cd
-barcode-recognition-cpp
+git clone https://www.github.com/SiwonP/barcode-recognition-cpp
+cd barcode-recognition-cpp
 cmake .
 make
+```
+
+## Usage
+
+```
+./DisplayImage <image path>
 ```
