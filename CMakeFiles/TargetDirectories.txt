@@ -1,3 +1,0 @@
-/Users/simon/Documents/barCodeRecognition_CPP/CMakeFiles/rebuild_cache.dir
-/Users/simon/Documents/barCodeRecognition_CPP/CMakeFiles/edit_cache.dir
-/Users/simon/Documents/barCodeRecognition_CPP/CMakeFiles/DisplayImage.dir
