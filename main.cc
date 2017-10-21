@@ -22,8 +22,6 @@ int main(int argc, char** argv )
         printf("No image data \n");
         return -1;
     }
-    //cout << image << endl; 
-
 
     int scale = 1;
     int ddepth = CV_16S;
@@ -74,9 +72,20 @@ int main(int argc, char** argv )
     RotatedRect contourRect;
     contourRect = minAreaRect(contours[contours.size()-1]);
 
+    /*
+     * Contour is the biggest contour 
+     * of all the contours and we assume that
+     * it surrounds the bar code
+     */
     contour.push_back(contours[contours.size()-1]);
 
-    drawContours(image, contour, -1, Scalar(0, 255, 0), 3);
+    //drawContours(image, contours, -1, Scalar(0, 255, 0), 3);
+    Point2f vertices[4];
+    contourRect.points(vertices);
+
+    for (int i = 0; i < 4; i++) {
+        line(image, vertices[i], vertices[(i+1)%4], Scalar(0,255,0));
+    }
 
     namedWindow("Display Image", WINDOW_AUTOSIZE );
     imshow("Display Image", image);
